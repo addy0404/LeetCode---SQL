@@ -3,7 +3,7 @@ from MovieRating r
 left join Users u
 on u.user_id=r.user_id
 group by u.name
-order by count(distinct r.movie_id) desc, u.name asc
+order by count(r.movie_id) desc, u.name asc
 limit 1)
 
 union all
